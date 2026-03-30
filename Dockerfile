@@ -1,5 +1,5 @@
-# Browser binaries match playwright in server/package.json (^1.49.x).
-FROM mcr.microsoft.com/playwright:v1.49.1-jammy
+# Keep this tag in sync with server/package.json `playwright` version.
+FROM mcr.microsoft.com/playwright:v1.58.2-jammy
 
 WORKDIR /app
 

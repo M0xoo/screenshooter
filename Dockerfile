@@ -14,7 +14,11 @@ COPY shared ./shared
 COPY server ./server
 COPY client ./client
 
-RUN npm run build
+# Render: Dashboard env vars are passed as Docker build args (same names).
+# See https://render.com/docs/docker#environment-variable-translation
+ARG VITE_PUBLIC_SITE_URL
+ARG VITE_OG_IMAGE_URL
+RUN VITE_PUBLIC_SITE_URL="${VITE_PUBLIC_SITE_URL}" VITE_OG_IMAGE_URL="${VITE_OG_IMAGE_URL}" npm run build
 
 ENV NODE_ENV=production
 ENV PORT=8080

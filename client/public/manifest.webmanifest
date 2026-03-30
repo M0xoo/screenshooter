@@ -1,0 +1,17 @@
+{
+  "name": "Screenshoter — Web page to PNG",
+  "short_name": "Screenshoter",
+  "description": "Capture any URL as a screenshot, style it in the composer, and export a shareable PNG.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#171717",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

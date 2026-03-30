@@ -1,8 +1,19 @@
 # https://render.com/docs/blueprint-spec
 # After pushing to GitHub/GitLab: Dashboard → New → Blueprint → pick this repo.
+#
+# SEO / Vite: set these in the Render service Environment (or below). Render
+# forwards them as Docker build args during `docker build`, so they are baked
+# into client/dist at build time.
+#   VITE_PUBLIC_SITE_URL  — public site origin, e.g. https://yourapp.onrender.com
+#   VITE_OG_IMAGE_URL     — optional absolute URL for og:image / Twitter card
 services:
   - type: web
     name: screenshoter
     runtime: docker
     plan: free
     healthCheckPath: /api/health
+    envVars:
+      - key: VITE_PUBLIC_SITE_URL
+        sync: false
+      - key: VITE_OG_IMAGE_URL
+        sync: false

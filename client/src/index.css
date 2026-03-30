@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --color-canvas: #fafafa;
+  --color-surface: #ffffff;
+  --color-border: #e5e5e5;
+  --color-muted: #737373;
+  --color-fg: #171717;
+  --color-accent: #171717;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background: var(--color-canvas);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.preview-shell {
+  background-color: #f4f4f5;
+  background-image:
+    linear-gradient(45deg, #ebebeb 25%, transparent 25%),
+    linear-gradient(-45deg, #ebebeb 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ebebeb 75%),
+    linear-gradient(-45deg, transparent 75%, #ebebeb 75%);
+  background-size: 14px 14px;
+  background-position:
+    0 0,
+    0 7px,
+    7px -7px,
+    -7px 0;
+}
+
+.composer-color-picker.react-colorful {
+  width: 176px;
+  height: 132px;
+}

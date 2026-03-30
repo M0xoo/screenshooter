@@ -1,0 +1,8 @@
+# https://render.com/docs/blueprint-spec
+# After pushing to GitHub/GitLab: Dashboard → New → Blueprint → pick this repo.
+services:
+  - type: web
+    name: screenshoter
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health

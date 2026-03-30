@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/components/compactcolor.tsx","./src/components/composercanvas.tsx","./src/components/composercontrols.tsx","./src/components/landing.tsx","./src/composer/export.ts","./src/composer/usecomposerhistory.ts"],"version":"5.7.3"}
